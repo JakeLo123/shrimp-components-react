@@ -1,0 +1,38 @@
+{
+  "name": "shrimp-components-react",
+  "version": "0.0.1",
+  "description": "React wrapper for shrimp-components web component library",
+  "scripts": {
+    "build": "yarn run clean && yarn run compile",
+    "compile:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "compile:esm": "tsc --module es6 --outDir dist/esm",
+    "clean": "rm -rf dist",
+    "compile": "yarn run tsc && yarn compile:cjs",
+    "distribute": "yarn run build && npm publish",
+    "tsc": "tsc -p ."
+  },
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "devDependencies": {
+    "@types/node": "^14.14.41",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "np": "^7.4.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "shrimp-components": "0.0.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "author": "jakelo123",
+  "license": "MIT"
+}
